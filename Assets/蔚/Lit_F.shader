@@ -279,9 +279,9 @@ half4 LitPassFragment(Varyings input) : SV_Target
 
     half3 var_DiffWarpTex =  SAMPLE_TEXTURE2D(_SSS, sampler_SSS,half2(halfLambert, 0.2));  
         
-    NdotL = lerp(NdotL,var_DiffWarpTex,_SSSStrength);
+    half3 NL = lerp(halfLambert,var_DiffWarpTex,_SSSStrength);
         
-    half3 radiance = mainLight.color * (mainLight.distanceAttenuation * mainLight.shadowAttenuation * NdotL);
+    half3 radiance = mainLight.color *  NL*(mainLight.distanceAttenuation * mainLight.shadowAttenuation );
 
     half3 brdf = brdfData.diffuse;
 #ifndef _SPECULARHIGHLIGHTS_OFF
@@ -298,13 +298,6 @@ half4 LitPassFragment(Varyings input) : SV_Target
 #endif // _SPECULARHIGHLIGHTS_OFF
         
      lightingData.mainLightColor= brdf * radiance;
-
-
-
-
-        
-
-        
     }
     #if defined(_ADDITIONAL_LIGHTS)
     uint pixelLightCount = GetAdditionalLightsCount();

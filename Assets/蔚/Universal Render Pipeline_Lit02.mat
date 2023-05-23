@@ -8,10 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Universal Render Pipeline_Lit02
-  m_Shader: {fileID: 4800000, guid: c9c671625ac099b449f227ee4983edc5, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 4800000, guid: bac3aace20de3704e89c2dd266051e0f, type: 3}
+  m_ValidKeywords:
+  - _Diss
+  m_InvalidKeywords:
+  - "\u539F\u7248PBR"
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -21,23 +23,43 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 06ae1ef343e583346b78e1503da760a1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
+        m_Texture: {fileID: 2800000, guid: 095487004b58d6c439664df0cf95b2cb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _H:
+        m_Texture: {fileID: 2800000, guid: c13479115be146d45a571cd486417578, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: c13479115be146d45a571cd486417578, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5257f7121291f7e42bc8114298dd4e4b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SSS:
+        m_Texture: {fileID: 2800000, guid: a93c975106cb540458e1b2eeada2e51e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -48,22 +70,33 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
+    - _BlendOp: 0
     - _BumpScale: 1
-    - _Cull: 2
+    - _ColorMask: 15
+    - _CubemapMip: 0
+    - _CubemapRange: 1
+    - _Cull: 0
     - _Cutoff: 0.5
+    - _DissolveOffset: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _Fo: 1
     - _Metallic: 0
-    - _OcclusionStrength: 1
+    - _OcclusionStrength: 0.468
     - _Parallax: 0.005
+    - _SSSStrength: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
+    - _ZTestMode: 2
     - _ZWrite: 1
     m_Colors:
+    - _B: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveCol1: {r: 1, g: 0, b: 0, a: 1}
+    - _DissolveCol2: {r: 0.9579072, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
